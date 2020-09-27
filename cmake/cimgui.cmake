@@ -33,6 +33,7 @@ target_link_libraries(cimgui
 target_compile_definitions(cimgui PRIVATE
     IMGUI_IMPL_API=extern\ \"C\"
     IMGUI_IMPL_LOADER_GLAD
+    IMGUI_IMPL_OPENGL_LOADER_GLAD
     )
 
 set_target_properties(cimgui PROPERTIES FOLDER 3rdparty)
