@@ -1,6 +1,8 @@
 project(MinimalImGui)
 cmake_minimum_required(VERSION 3.1)
 
+set(CMAKE_C_STANDARD 11)
+
 # 3rd party libraries
 include(cmake/3rdparty.cmake)
 

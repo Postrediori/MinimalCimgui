@@ -2,8 +2,6 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose build type: Debug  Release" FORCE)
 endif ()
 
-set(CMAKE_C_STANDARD 11)
-
 macro(make_project_)
     if (NOT DEFINED PROJECT)
         get_filename_component(PROJECT ${CMAKE_CURRENT_SOURCE_DIR} NAME)
@@ -24,10 +22,15 @@ macro(make_project_)
 endmacro ()
 
 macro(make_compile_options_)
-    if(MSVC)
+    if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
         target_compile_options(${PROJECT} PUBLIC /Wall)
-    else ()
-        target_compile_options(${PROJECT} PUBLIC -Wall -Wextra -Wpedantic -std=c11)
+    elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+        target_compile_options(${PROJECT} PUBLIC
+            -Wall -Wextra -Wpedantic
+            -Wno-implicit-function-declaration) # cimgui conflicts with clang without this
+    elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+        target_compile_options(${PROJECT} PUBLIC
+            -Wall -Wextra -Wpedantic)
     endif ()
 endmacro()
 
