@@ -75,6 +75,5 @@ make install
 Using `make install` will copy the executable to `bundle` directory:
 
 ```
-cd bundle
-./MinimalCimgui/MinimalCimgui
+./bundle/MinimalCimgui
 ```
