@@ -23,8 +23,8 @@ The following files are used for using cimgui as CMake dependency:
 
 The following instructions apply to:
 
-* Ubuntu 20.04, 18.04, 16.04
-* Debian 10, 9
+* Ubuntu 24.04, 22.04, 20.04
+* Debian 12, 11
 
 ```
 sudo apt-get install -y \

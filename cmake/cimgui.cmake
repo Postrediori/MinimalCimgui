@@ -3,6 +3,7 @@ set(CIMGUI_IMGUI ${CIMGUI_DIR}/imgui)
 set(CIMGUI_IMGUI_IMPL ${CIMGUI_IMGUI}/backends)
 set(CIMGUI_INCLUDE_DIRS
     ${CIMGUI_DIR}
+    ${CIMGUI_DIR}/generator/output
     ${CIMGUI_IMGUI}
     ${CIMGUI_IMGUI_IMPL}
     )
