@@ -6,7 +6,9 @@
 #ifdef _MSC_VER
 #include <windows.h>
 #endif
+#ifndef __APPLE__
 #include <GL/gl.h>
+#endif
 
 
 #ifdef IMGUI_HAS_IMSTR
