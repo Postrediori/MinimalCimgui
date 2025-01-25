@@ -13,3 +13,8 @@ target_link_libraries(${PROJECT}
     ${GLAD_LIBRARIES}
     ${CIMGUI_LIBRARY}
     )
+
+target_compile_definitions(${PROJECT} PUBLIC
+    CIMGUI_USE_OPENGL3
+    CIMGUI_USE_GLFW
+    )
