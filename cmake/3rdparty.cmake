@@ -1,3 +1,7 @@
+if (CMAKE_SYSTEM_NAME STREQUAL Linux)
+    set(OpenGL_GL_PREFERENCE "GLVND")
+endif ()
+
 find_package(OpenGL REQUIRED)
 
 if (CMAKE_SYSTEM_NAME STREQUAL Linux)

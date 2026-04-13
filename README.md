@@ -19,30 +19,28 @@ The following files are used for using cimgui as CMake dependency:
 
 ## Environment Setup
 
-### Debian-based Systems
-
-The following instructions apply to:
-
-* Ubuntu 24.04, 22.04, 20.04
-* Debian 12, 11
+### On Ubuntu or Debian
 
 ```
-sudo apt-get install -y \
+apt install \
     build-essential \
     cmake \
     xorg-dev \
     libgl1-mesa-dev \
-    libfreetype6-dev
+    libfreetype6-dev \
+    libxkbcommon-dev
 ```
 
-### RedHat-based Systems
-
-The following instructions apply to:
-
-* Fedora 22 and higher
+Additional dependency for building under Wayland:
 
 ```
-sudo dnf install -y \
+apt install libwayland-dev
+```
+
+### On RedHat-based, Fedora systems
+
+```
+dnf install \
     gcc gcc-c++ make \
     cmake \
     mesa-libGL-devel \
@@ -50,7 +48,14 @@ sudo dnf install -y \
     libXinerama-devel \
     libXcursor-devel \
     libXi-devel \
+    libxkbcommon-devel \
     freetype-devel
+```
+
+Additional dependency for building under Wayland:
+
+```
+dnf install wayland-devel
 ```
 
 ## Building
